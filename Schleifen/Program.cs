@@ -40,7 +40,7 @@
                 double rutsch = Convert.ToDouble(Console.ReadLine());
 
                 double länge = 60 * 30.48 - rutsch;
-                gesamt = länge / umfang;
+                gesamt = gesamt + länge / umfang;
                 Console.WriteLine($"Die Kugel dreht sich {länge / umfang} mal.");
                 //zähler = zähler + 1;
                 //zähler += 1;
