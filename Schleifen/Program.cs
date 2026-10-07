@@ -4,7 +4,8 @@
     {
         static void Main(string[] args)
         {
-            SchleifenBeispiel();
+            //SchleifenBeispiel();
+            BowlingMitSchleife();
         }
         static void SchleifenBeispiel()
         {
@@ -23,6 +24,21 @@
                 Console.WriteLine(zähler);
                 zähler = zähler + 1;
             } while (zähler < 10);
-        }//Ende Methode
+        }
+        static void BowlingMitSchleife()
+        {
+            double gesamt = 0;
+            //Erster
+            Console.WriteLine("Bitte gib den Durchmesser ein: ");
+            double durchmesser = Convert.ToDouble(Console.ReadLine());
+            double umfang = durchmesser * 3.14159;//neuer Durchmesser
+
+            Console.WriteLine("Wie weit rutscht die Kugel in cm");
+            double rutsch = Convert.ToDouble(Console.ReadLine());
+
+            double länge = 60 * 30.48 - rutsch;
+            gesamt = länge / umfang;
+            Console.WriteLine($"Die Kugel dreht sich {länge / umfang} mal.");
+        }
     }
 }
