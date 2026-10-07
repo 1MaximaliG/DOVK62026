@@ -1,0 +1,11 @@
+# Visual Studio user-specific files
+.vs/
+# Compilier daten
+[Bb]in/
+[Oo]bj/
+.vs/
+# Visual Studio user-specific files
+*.suo
+*.user
+DocumentLayout.json
+*.vsidx
