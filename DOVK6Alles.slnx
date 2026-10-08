@@ -5,4 +5,5 @@
   <Project Path="FußgesteuerteSchleifen/FußgesteuerteSchleifen.csproj" Id="a62b0b94-699f-49cb-88bd-6482621571c4" />
   <Project Path="KopfgesteuerteSchleifen/KopfgesteuerteSchleifen.csproj" Id="ed4c7752-97cc-45aa-814c-6c4f890b560b" />
   <Project Path="Schleifen/Schleifen.csproj" Id="0bad9415-86d0-4939-a86c-3bc0eabbf786" />
+  <Project Path="Verzeigung/Verzweigung.csproj" Id="f6e153c5-2e1a-4926-864f-fef267e2dd2d" />
 </Solution>

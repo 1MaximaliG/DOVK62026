@@ -24,6 +24,34 @@
             } while (e <= 20);
             Console.WriteLine(summe);
         }
+        static void Aufgabe2b()
+        {
+            int summe = 0;
+            int e = 1;
+            do
+            {
+                if ((e / 2) == (e / 2f))
+                {
+                    summe += e;
+                }
+                e++;
+            } while (e <= 20);
+            Console.WriteLine(summe);
+        }
+        static void Aufgabe2c()
+        {
+            int summe = 0;
+            int e = 1;
+            do
+            {
+                if (e % 2 == 0)
+                {
+                    summe += e;
+                }
+                e++;
+            } while (e <= 20);
+            Console.WriteLine(summe);
+        }
         static void Aufgabe3()
         {
             int zähler = 0;
@@ -89,10 +117,12 @@
         {
             //Aufgabe1();
             //Aufgabe2();
+            Aufgabe2b();
+            Aufgabe2c();
             //Aufgabe3();
             //Aufgabe4();
             //Aufgabe7();
-            Aufgabe7b();
+            //Aufgabe7b();
         }
     }
 }
