@@ -6,4 +6,6 @@
   <Project Path="KopfgesteuerteSchleifen/KopfgesteuerteSchleifen.csproj" Id="ed4c7752-97cc-45aa-814c-6c4f890b560b" />
   <Project Path="Schleifen/Schleifen.csproj" Id="0bad9415-86d0-4939-a86c-3bc0eabbf786" />
   <Project Path="Verzeigung/Verzweigung.csproj" Id="f6e153c5-2e1a-4926-864f-fef267e2dd2d" />
+  <Project Path="Verzweigung2/Verzweigung2.csproj" Id="3fa0f8e0-1e4f-40e0-a5ef-930ada7003ef" />
+  <Project Path="Zahlenraten/Zahlenraten.csproj" Id="38759faf-3b0b-42dc-9b99-7c4e6c28db0a" />
 </Solution>
