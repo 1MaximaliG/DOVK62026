@@ -1,6 +1,7 @@
 <Solution>
   <Project Path="ArrayAufgaben/ArrayAufgaben.csproj" Id="348ae1bc-8e93-494d-98d1-8d8b0fddb5a2" />
   <Project Path="Arrays/Arrays.csproj" Id="4b9549d5-9d79-4bd2-91a0-880274ed5be0" />
+  <Project Path="ArrayStrings/ArrayStrings.csproj" Id="f4aeea94-5015-4089-af85-1c7eb1c0f254" />
   <Project Path="Ausgaben/Ausgaben.csproj" />
   <Project Path="Basics/Basics.csproj" />
   <Project Path="EVAPrinzip/EVAPrinzip.csproj" Id="5419c62a-d1cb-4a42-bbba-e6ed69b59854" />

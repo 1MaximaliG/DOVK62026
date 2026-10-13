@@ -89,7 +89,8 @@
             }
             Console.WriteLine();
             Console.WriteLine("Summe: " + summe);
-            Console.WriteLine("Summe: "+ zahlen.Sum());
+            Console.WriteLine("Summe: " + zahlen.Sum());
+            Console.WriteLine((double)summe / zahlen.Length);
         }
         static void Main(string[] args)
         {
@@ -98,7 +99,13 @@
             //Aufgabe3();
             //Aufgabe4();
             //Aufgabe5();
-            Aufgabe6();
+            //Aufgabe6();
+            string text = "abcdefAAA342628#+#+#+^°";
+            for(int i = text.Length -1; i >= 0; i--)
+            {
+                Console.Write($"{text[i]}");
+            }
+            
         }
     }
 }
