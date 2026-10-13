@@ -4,7 +4,7 @@ namespace Passwörter
 {
     internal class Program
     {
-        static void Main(string[] args)
+        static void Aufgabe1()
         {
             char[] pw = "dubidubidu".ToCharArray();
             /* Erste Idee: Farbe der schrift so ändern, 
@@ -49,13 +49,14 @@ namespace Passwörter
             //}
             //Console.WriteLine(eingabe);
             bool hatFehler = false;
-            for(int i = 0; i< pw.Length; i++)
+            for (int i = 0; i < pw.Length; i++)
             {
                 if (pw[i] != eingabe[i])
                 {
                     hatFehler = true;
                     break;//bricht die schleife ab //muss nich gemacht werden
                 }
+
             }
             if (hatFehler)
             {
@@ -65,6 +66,31 @@ namespace Passwörter
             {
                 Console.WriteLine("Zugang gewährt");
             }
+        }
+        static void Aufgabe2()
+        {
+            Random randy = new Random();
+            int länge = randy.Next(8, 25);
+            char[] pw = new char[länge];
+            for(int i = 0; i < länge; i++)
+            {
+                pw[i] = (char)randy.Next(33,127);
+            }
+            Console.WriteLine(pw);
+        }
+        static void Main(string[] args)
+        {
+            //Aufgabe1();
+            //Aufgabe2();
+            
+            Random randy = new Random();
+            int länge = randy.Next(8, 25);
+            char[] pw = new char[länge];
+            for (int i = 0; i < länge; i++)
+            {
+                pw[i] = (char)randy.Next(33, 127);
+            }
+            Console.WriteLine(pw);
         }
     }
 }
