@@ -103,16 +103,37 @@
                 Console.Clear();
             }
         }
+        static double FahrenheitZuCelsius(double fahrenheit)
+        {
+            double celsius = (fahrenheit - 32) * 5 / 9;
+            return celsius;
+        }
+        static double CelsiusZuFahrenheit(double celsius)
+        {
+            double fahrenheit = celsius * 9 / 5 + 32;
+            return fahrenheit;
+        }
+        static double PfundInKilo(double pfund)
+        {
+            double kilo = pfund * 0.453592;
+            return kilo;
+        }
+        static decimal SterlingZuEuro(decimal pfund)
+        {
+            decimal euro = pfund * 1.19m;
+            return euro;
+        }
         static void Main(string[] args)
         {
-            //Beispiel: Wir bauen einen Taschenrechner
-            //double eineZahl = Addieren(1, 1);
-            //double nochNeZahl = Addieren(5, 9);
-            //double eineWeitereZahl = Multipilzieren(2, 5);
-            //double divi = Dividieren(1, 0);
-            //double divi2 = Dividieren(1, 26);
-            Menue();
+            //Menue();
+            //Console.WriteLine("Gib ein zahl ein");
+            ////double fahrenheitAussen = Convert.ToDouble(Console.ReadLine());
+            ////Console.WriteLine(FahrenheitZuCelsius(fahrenheitAussen));
+            //double celsiusAussen = Convert.ToDouble(Console.ReadLine());
+            //Console.WriteLine(CelsiusZuFahrenheit(celsiusAussen));
 
+            //Console.WriteLine(PfundInKilo(100));
+            Console.WriteLine(SterlingZuEuro(10));
         }
     }
 }
