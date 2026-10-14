@@ -72,25 +72,135 @@ namespace Passwörter
             Random randy = new Random();
             int länge = randy.Next(8, 25);
             char[] pw = new char[länge];
-            for(int i = 0; i < länge; i++)
-            {
-                pw[i] = (char)randy.Next(33,127);
-            }
-            Console.WriteLine(pw);
-        }
-        static void Main(string[] args)
-        {
-            //Aufgabe1();
-            //Aufgabe2();
-            
-            Random randy = new Random();
-            int länge = randy.Next(8, 25);
-            char[] pw = new char[länge];
             for (int i = 0; i < länge; i++)
             {
                 pw[i] = (char)randy.Next(33, 127);
             }
             Console.WriteLine(pw);
+        }
+        static void Aufgabe3()
+        {
+            bool weiter = true;
+            do
+            {
+                char[] klein = "abcdefghijklmnopqrstuvwxyz".ToCharArray();
+                char[] groß = "abcdefghijklmnopqrstuvwxyz".ToUpper().ToCharArray();
+                char[] number = "1234567890".ToCharArray();
+
+
+                Random randy = new Random();
+                int länge = randy.Next(8, 25);
+                char[] pw = new char[länge];
+                for (int i = 0; i < länge; i++)
+                {
+                    pw[i] = (char)randy.Next(33, 127);
+                }
+                Console.WriteLine(pw);
+                //Zählvariablen
+                //int A_klein = 0;
+                int A_groß = 0;
+                int A_sonder = 0;
+                int A_Zahl = 0;
+                //Überprüfen jedes buchstabens im Passwort
+                for (int i = 0; i < pw.Length; i++)
+                {
+                    if (groß.Contains(pw[i]))//ist das ein Großbuchstabe?
+                    {
+                        A_groß++;
+                    }
+                    else if (number.Contains(pw[i]))//ist das eine Zahl?
+                    {
+                        A_Zahl++;
+                    }
+                    else if (!klein.Contains(pw[i]))//ist das KEIN kleiner Buchstabe
+                    {
+                        A_sonder++;
+                    }
+                }
+                if (pw.Length >= 8 && A_Zahl >= 2 && A_sonder >= 1 && A_groß >= 3)
+                {
+                    Console.WriteLine("Passwort ist Gut");
+                }
+                else
+                {
+                    Console.WriteLine("Passwort ist schlecht");
+                }
+
+                Console.WriteLine("Möchten sie ein weiteres Passwort generieren?");
+                char eingabe = Console.ReadKey().KeyChar;
+                if (eingabe == 'j' || eingabe == 'J')
+                {
+                    weiter = true;
+                }
+                else
+                {
+                    weiter = false;
+                }
+            } while (weiter);
+        }
+
+
+        static void Main(string[] args)
+        {
+            //Aufgabe1();
+            //Aufgabe2();
+            bool weiter = true;
+            do
+            {
+                char[] klein = "abcdefghijklmnopqrstuvwxyz".ToCharArray();
+                char[] groß = "abcdefghijklmnopqrstuvwxyz".ToUpper().ToCharArray();
+                char[] number = "1234567890".ToCharArray();
+
+
+                Random randy = new Random();
+                int länge = randy.Next(8, 25);
+                char[] pw = new char[länge];
+                for (int i = 0; i < länge; i++)
+                {
+                    pw[i] = (char)randy.Next(33, 127);
+                }
+                Console.WriteLine(pw);
+                //Zählvariablen
+                //int A_klein = 0;
+                int A_groß = 0;
+                int A_sonder = 0;
+                int A_Zahl = 0;
+                //Überprüfen jedes buchstabens im Passwort
+                for (int i = 0; i < pw.Length; i++)
+                {
+                    if (groß.Contains(pw[i]))//ist das ein Großbuchstabe?
+                    {
+                        A_groß++;
+                    }
+                    else if (number.Contains(pw[i]))//ist das eine Zahl?
+                    {
+                        A_Zahl++;
+                    }
+                    else if (!klein.Contains(pw[i]))//ist das KEIN kleiner Buchstabe
+                    {
+                        A_sonder++;
+                    }
+                }
+                if (pw.Length >= 8 && A_Zahl >= 2 && A_sonder >= 1 && A_groß >= 3)
+                {
+                    Console.WriteLine("Passwort ist Gut");
+                }
+                else
+                {
+                    Console.WriteLine("Passwort ist schlecht");
+                }
+
+                Console.WriteLine("Möchten sie ein weiteres Passwort generieren?");
+                char eingabe = Console.ReadKey().KeyChar;
+                if(eingabe == 'j' || eingabe == 'J')
+                {
+                    weiter = true;
+                }
+                else
+                {
+                    weiter = false;
+                }
+            } while (weiter);
         }
     }
 }
