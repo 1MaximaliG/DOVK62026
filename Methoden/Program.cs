@@ -1,4 +1,6 @@
-﻿namespace Methoden
+﻿using System.Xml.Schema;
+
+namespace Methoden
 {
     internal class Program
     {
@@ -123,17 +125,65 @@
             decimal euro = pfund * 1.19m;
             return euro;
         }
+        static void Aufgabe5(decimal wert, decimal wechselkurs, string nameDerWährung)
+        {
+            Console.WriteLine($"Die {wert} Geld sind {wert * wechselkurs} {nameDerWährung}!");
+        }
+        static double berechneBMI(double gewicht, double größe)
+        {
+            double bmi = gewicht / (größe * größe);
+            return bmi;
+        }
+        static void Gewichtskategorie(double bmi)
+        {
+            if (bmi < 18.5) { Console.WriteLine("Untergewicht, böser Kommentar"); }
+            else if (bmi < 24.9) { Console.WriteLine("Normalgewicht, böser Kommentar"); }
+            else { Console.WriteLine("Übergewicht, böser Kommentar"); }
+        }
+        static string ZufallsString(string[] liste)
+        {
+            Random ron = new Random();
+            int i = ron.Next(0, liste.Length);
+            return liste[i];
+        }
+        static void Namensgenerator()
+        {
+            string[] vornamen = { "Anton", "Bertha", "Charlie", "Donald", "Emmily", "Flunder", "Guste", "Heinrich", "Ingo", "Julia", "Kermit" };
+            string[] nachname = { "Speer", "Hofreiter", "Humbert", "Messi", "Ronaldo", "Reus", "Thiel", "Constantelias", "Papadopulos" };
+            Console.WriteLine(ZufallsString(vornamen) + " " + ZufallsString(nachname));
+        }
+        static void NamensgeneratorZwei()
+        {
+            string[] vornamen = { "Anton", "Bertha", "Charlie", "Donald", "Emmily", "Flunder", "Guste", "Heinrich", "Ingo", "Julia", "Kermit" };
+            string[] nachname = { "Speer", "Hofreiter", "Humbert", "Messi", "Ronaldo", "Reus", "Thiel", "Constantelias", "Papadopulos" };
+            string[] titel = { "Papst*in", "Baron*in", "Kek*in", "King of Pop", "Hehe", "General", "Meister", "Padawan", "Kaptän" };
+            Random nomnom = new Random();
+            int x = nomnom.Next(0, 10);
+            if (x % 10 == 0)
+                Console.WriteLine(ZufallsString(titel) + " " + ZufallsString(vornamen) + " " + ZufallsString(nachname));
+            else
+                Console.WriteLine(ZufallsString(vornamen) + " " + ZufallsString(nachname));
+        }
         static void Main(string[] args)
         {
+            //double bmi = berechneBMI(90, 1.8);
+            //Console.WriteLine(bmi);
+            //Gewichtskategorie(bmi);
             //Menue();
             //Console.WriteLine("Gib ein zahl ein");
             ////double fahrenheitAussen = Convert.ToDouble(Console.ReadLine());
             ////Console.WriteLine(FahrenheitZuCelsius(fahrenheitAussen));
             //double celsiusAussen = Convert.ToDouble(Console.ReadLine());
             //Console.WriteLine(CelsiusZuFahrenheit(celsiusAussen));
-
             //Console.WriteLine(PfundInKilo(100));
-            Console.WriteLine(SterlingZuEuro(10));
+            //Console.WriteLine(SterlingZuEuro(10));
+            //Aufgabe5(100,1.19m,"Brocken");
+            //string[] tiere = new string[] { "Hund", "Katze", "Maus","Orca" , "Schwingschleifer" };
+            //string wert = ZufallsString(tiere);
+            //Console.WriteLine(wert);
+            while (true)
+                NamensgeneratorZwei();
+
         }
     }
 }
